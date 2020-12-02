@@ -1,0 +1,116 @@
+I"+<h1 id="docker">Docker</h1>
+
+<ul>
+  <li>Tool for running applications in an isolated environment</li>
+  <li>Advantages:
+    <ul>
+      <li>Same environment (Works on all computers if it works on docker)</li>
+      <li>Sandbox Projects (Keeps them separate: no conflicts &amp; better security)</li>
+      <li>Simple to get started on others’ projects</li>
+    </ul>
+  </li>
+  <li><em>Containers</em> are the building blocks of Docker
+    <ul>
+      <li>Stop by themselves when the main process finishes/exits (e.g. php or node.js dies)</li>
+      <li>Therefore, there should be <strong>one process per container</strong> b/c the life of the container is tied to that process</li>
+      <li>Containers are lightweight so lots of containers can be run on a computer at a time</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="docker-vs-virutal-machines">Docker vs. Virutal Machines</h2>
+
+<p><img src="https://www.weave.works/assets/images/bltb6200bc085503718/containers-vs-virtual-machines.jpg" alt="Docker v. Vms" /></p>
+
+<ul>
+  <li>Docker is less resource heavy than a virtual machine meaning it is faster than a VM</li>
+</ul>
+
+<h2 id="docker-images">Docker Images</h2>
+
+<p><img src="https://miro.medium.com/max/1273/1*p8k1b2DZTQEW_yf0hYniXw.png" alt="Docker Image" /></p>
+
+<ul>
+  <li>A <em>Dockerfile</em> is a file with a list of steps to create the image</li>
+  <li>A <em>Docker Image</em> is a template for creating a desired environment and includes an OS, software, and application code</li>
+  <li>A <em>Docker Container</em> is a running instance of a docker image</li>
+</ul>
+
+<h2 id="setting-up-a-docker-project">Setting up a Docker Project</h2>
+
+<ol>
+  <li>Create <code class="language-plaintext highlighter-rouge">Dockerfile</code> in the root of the project/services directory (outside src folder)
+    <ul>
+      <li>Where we will start from an existing image and build on top of it</li>
+      <li>Can find thousands of images on Dockerhub</li>
+    </ul>
+  </li>
+  <li>Write the instructions to build your image in the <code class="language-plaintext highlighter-rouge">Dockerfile</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">FROM</code> specifies the starting/base image to be downloaded from Dockerhub (Must be the 1st line)</li>
+      <li><code class="language-plaintext highlighter-rouge">COPY</code> copies the files from the first directory to the second location inside the image (specified in image’s documentation)</li>
+      <li><code class="language-plaintext highlighter-rouge">EXPOSE</code> tells running containers to listen on the specified port</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	FROM php:7-0-apache
+	COPY src/ /var/www/html
+	EXPOSE 80
+</code></pre></div></div>
+
+<ol>
+  <li>Build the docker image from the terminal
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">-t image-name</code> specifies the image’s name</li>
+      <li>location is the path to the <code class="language-plaintext highlighter-rouge">Dockerfile</code> which is <code class="language-plaintext highlighter-rouge">.</code> if in the same directory</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> image-name location
+</code></pre></div></div>
+
+<ol>
+  <li>Run the docker container from the terminal
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">-p 80:80</code> forwards port 80 in the host to port 80 in the container which was exposed in the docker file, allowing it to accept the request so that the code in the container can handle the request</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-p</span> 80:80 image-name
+</code></pre></div></div>
+
+<h2 id="volumes">Volumes</h2>
+
+<ul>
+  <li>One type allows the sharing of data between containers</li>
+  <li>The other type allows the sharing of folders between the host and the container
+    <ul>
+      <li>Useful for development since any changes to source code doesn’t require a new image to be built and new container to be spun up</li>
+      <li><strong>Will need to rebuild the image to deploy it</strong> to somewhere else b/c volumes just give the ability for a container to see files on the host’s filesystem, <strong>volumes don’t change the image</strong>
+        <ul>
+          <li>Building an image from a Dockerfile copies the src code so that it can be deployed elsewhere</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Mounting a volume is done when running the container
+    <ul>
+      <li><strong>Must use absolute paths of folders to be mounted</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -p80:80 -v /Users/admin/project/src/:/var/www/html/ image-name
+</code></pre></div></div>
+
+<h2 id="extra">Extra:</h2>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> python:3-onbuild</span>
+<span class="k">COPY</span><span class="s"> . /usr/src/app</span>
+<span class="k">CMD</span><span class="s"> ["python","api.py"]</span>
+</code></pre></div></div>
+
+:ET

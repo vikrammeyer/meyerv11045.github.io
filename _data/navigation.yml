@@ -1,4 +1,4 @@
-# main links
+# Main Navbar
 main:
   - title: "About Me"
     url: /about/
@@ -6,11 +6,22 @@ main:
   - title: "Math 2500"
     url: "/math2500/"
   
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "PSCI 2259"  
+    url: "/psci2259/"
+
+# Side Navbars
+math2500_side:
+  - title: Chapter 1
+    children:
+      - title: "Overview"
+        url: /math2500/overview/
+      - title: "Docker Overview"
+        url: /math2500/docker_overview/
+  
+psci2259_side:
+  - title: Chapter 1
+    children:
+      - title: "Welcome"
+        url: /psci2259/welcome/
+      - title: "Lesson 1"
+        url: /psci2259/lesson1/

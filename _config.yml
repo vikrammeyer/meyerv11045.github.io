@@ -240,7 +240,18 @@ compress_html:
   ignore:
     envs: development
 
+# Collections
+collections:
+  math2500:
+    output: true
+    sort_by: lesson
+    permalink: /:collection/:path/ 
 
+  psci2259:
+    output: true
+    sort_by: lesson
+    permalink: /:collection/:path/
+  
 # Defaults
 defaults:
   # _posts
@@ -261,8 +272,36 @@ defaults:
       type: pages
     values:
       layout: single
+      author_profile: True
+      read_time: false
+      comments: false
+      share: false
+      related: false
+  
+  # _math2500
+  - scope: 
+      path: ""
+      type: math2500
+    values:
+      layout: single
       author_profile: false
       read_time: true
       comments: false
       share: false
       related: false
+      sidebar: 
+        nav: "math2500_side"
+  
+  # _psci2259
+  - scope: 
+      path: ""
+      type: psci2259
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false
+      share: false
+      related: false
+      sidebar:
+        nav: "psci2259_side"
