@@ -263,6 +263,6 @@ defaults:
       layout: single
       author_profile: false
       read_time: true
-      comments: # true
-      share: True
-      related: True 
+      comments: false
+      share: false
+      related: false
