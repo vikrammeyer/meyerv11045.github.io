@@ -264,5 +264,5 @@ defaults:
       author_profile: false
       read_time: true
       comments: # true
-      share: true
-      related: true      
+      share: True
+      related: True 
