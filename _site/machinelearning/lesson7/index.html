@@ -1,0 +1,349 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>ML vs. DL- Defining Features - The Learning Journey</title>
+<meta name="description" content="As defined earlier, machine learning algorithms give computers the ability to learn from data and make decisions such as whether an email is spam or not. A computer is able to recognize a spam email based on features that are chosen by humans. For instance, features useful for detecting spam emails are the subject line, the words used in the body, and the number of links/images in the email. In machine learning, humans define/choose these features that will be used by the machine learning algorithm to make predictions. This process of choosing and defining the features in the dataset to be used in the machine learning model is known as feature selection and feature engineering. In feature selection, attributes of the data that are irrelevant to the problem are removed from the dataset in order to improve accuracy of the machine learning model \cite{FeatureSelection}. For instance, in trying to predict flight delays, the current temperature might be important, but the temperature from a year ago would be irrelevant to the problem, so all the old temperatures would be removed from the dataset as part of the feature selection process \cite{FeatureSelection}. Feature engineering is the process of adding and creating new attributes/features to the dataset in order to improve the machine learning model’s accuracy \cite{FeatureEngineering}. Feature engineering is highly dependent on the context of the problem and is often done by data scientists who understand relationships in the data and understand what features might be helpful for improving the model’s prediction accuracy. Here is the typical flow of using machine learning to solve a problem \cite{MLvsDL}:">
+
+
+  <meta name="author" content="Vikram Meyer">
+  
+  <meta property="article:author" content="Vikram Meyer">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Learning Journey">
+<meta property="og:title" content="ML vs. DL- Defining Features">
+<meta property="og:url" content="http://localhost:4000/machinelearning/lesson7/">
+
+
+  <meta property="og:description" content="As defined earlier, machine learning algorithms give computers the ability to learn from data and make decisions such as whether an email is spam or not. A computer is able to recognize a spam email based on features that are chosen by humans. For instance, features useful for detecting spam emails are the subject line, the words used in the body, and the number of links/images in the email. In machine learning, humans define/choose these features that will be used by the machine learning algorithm to make predictions. This process of choosing and defining the features in the dataset to be used in the machine learning model is known as feature selection and feature engineering. In feature selection, attributes of the data that are irrelevant to the problem are removed from the dataset in order to improve accuracy of the machine learning model \cite{FeatureSelection}. For instance, in trying to predict flight delays, the current temperature might be important, but the temperature from a year ago would be irrelevant to the problem, so all the old temperatures would be removed from the dataset as part of the feature selection process \cite{FeatureSelection}. Feature engineering is the process of adding and creating new attributes/features to the dataset in order to improve the machine learning model’s accuracy \cite{FeatureEngineering}. Feature engineering is highly dependent on the context of the problem and is often done by data scientists who understand relationships in the data and understand what features might be helpful for improving the model’s prediction accuracy. Here is the typical flow of using machine learning to solve a problem \cite{MLvsDL}:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-12-05T14:23:55-05:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/machinelearning/lesson7/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Vikram Meyer",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="The Learning Journey Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/profile.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          The Learning Journey
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About Me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/math2500/">Math 2500</a>
+            </li><li class="masthead__menu-item">
+              <a href="/psci2259/">PSCI 2259</a>
+            </li><li class="masthead__menu-item">
+              <a href="/machinelearning/">Machine Learning</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Artificial Intelligence</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/machinelearning/lesson1/">What is Artificial Intelligence?</a></li>
+          
+            <li><a href="/machinelearning/lesson2/">Classifications of AI</a></li>
+          
+            <li><a href="/machinelearning/lesson3/">AI vs. ML vs. DL</a></li>
+          
+            <li><a href="/machinelearning/lesson4/">What is Machine Learning?</a></li>
+          
+            <li><a href="/machinelearning/lesson5/">3 Types of Machine Learning</a></li>
+          
+            <li><a href="/machinelearning/lesson6/">What is Deep Learning?</a></li>
+          
+            <li><a href="/machinelearning/lesson7/" class="active">ML vs. DL- Defining Features</a></li>
+          
+            <li><a href="/machinelearning/lesson8/">End Note</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="ML vs. DL- Defining Features">
+    <meta itemprop="description" content="As defined earlier, machine learning algorithms give computers the ability to learn from data and make decisions such as whether an email is spam or not. A computer is able to recognize a spam email based on features that are chosen by humans. For instance, features useful for detecting spam emails are the subject line, the words used in the body, and the number of links/images in the email. In machine learning, humans define/choose these features that will be used by the machine learning algorithm to make predictions. This process of choosing and defining the features in the dataset to be used in the machine learning model is known as feature selection and feature engineering. In feature selection, attributes of the data that are irrelevant to the problem are removed from the dataset in order to improve accuracy of the machine learning model \cite{FeatureSelection}. For instance, in trying to predict flight delays, the current temperature might be important, but the temperature from a year ago would be irrelevant to the problem, so all the old temperatures would be removed from the dataset as part of the feature selection process \cite{FeatureSelection}. Feature engineering is the process of adding and creating new attributes/features to the dataset in order to improve the machine learning model’s accuracy \cite{FeatureEngineering}. Feature engineering is highly dependent on the context of the problem and is often done by data scientists who understand relationships in the data and understand what features might be helpful for improving the model’s prediction accuracy. Here is the typical flow of using machine learning to solve a problem \cite{MLvsDL}:">
+    <meta itemprop="datePublished" content="2020-12-05T14:23:55-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">ML vs. DL- Defining Features
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>As defined earlier, machine learning algorithms give computers the ability to learn from data and make decisions such as whether an email is spam or not. A computer is able to recognize a spam email based on features that are chosen by humans. For instance, features useful for detecting spam emails are the subject line, the words used in the body, and the number of links/images in the email. In machine learning, humans define/choose these features that will be used by the machine learning algorithm to make predictions. This process of choosing and defining the features in the dataset to be used in the machine learning model is known as <em>feature selection</em> and <em>feature engineering</em>. In feature selection, attributes of the data that are irrelevant to the problem are removed from the dataset in order to improve accuracy of the machine learning model \cite{FeatureSelection}. For instance, in trying to predict flight delays, the current temperature might be important, but the temperature from a year ago would be irrelevant to the problem, so all the old temperatures would be removed from the dataset as part of the feature selection process \cite{FeatureSelection}. Feature engineering is the process of adding and creating new attributes/features to the dataset in order to improve the machine learning model’s accuracy \cite{FeatureEngineering}. Feature engineering is highly dependent on the context of the problem and is often done by data scientists who understand relationships in the data and understand what features might be helpful for improving the model’s prediction accuracy. Here is the typical flow of using machine learning to solve a problem \cite{MLvsDL}:</p>
+
+<ul>
+  <li>Upload the input data relevant to the problem (e.g. Audio, Text, Images, Numbers, etc.)</li>
+  <li>Define the important features of the data through feature selection and feature engineering (e.g. For a simple linear regression to predict housing prices the important features might be the size of the house, the number of bedrooms, and the number of bathrooms)</li>
+  <li>Create and train the model(s)– Multiple models might be useful in solving the problem</li>
+  <li>Make predictions on new data using the trained model</li>
+</ul>
+
+<p><img src="/assets/images/ML_images/AI/MLFlow.png" alt="Machine Learning Flow" /></p>
+
+<p>As defined earlier, deep learning is a subfield of machine learning focused on large, multi-layered neural networks. In machine learning, the features are manually defined in a time-consuming process prone to human error and bias. In deep learning, the features of a dataset are not manually defined, but are rather learned by the neural network through as part of a <em>feature hierarchy</em> as mentioned in the previous section\cite{DL_Pathmind}. Each additional hidden layer in a deep neural network allows a more complex feature to be learned.</p>
+
+<p><img src="/assets/images/ML_images/AI/DL_Features.png" alt="Deep Learning Features" /></p>
+
+<p>Look at figure \ref{fig:DNN_Features}, where given an image input as a series of pixels each additional layer in the neural network will learn a more complex feature. The second layer learns edges, the third layer groups these edges to create fragments, and the final layer groups these fragments to learn complex objects such as faces. This automatic learning of different features, ones that get more complex the deeper into the neural network, is what makes deep learning different from the manual feature selection process of other machine learning algorithms. As mentioned earlier, deep learning typically requires much larger sets of data than machine learning. Additionally, the more neurons in deep neural networks makes deep learning much more computationally expensive than machine learning. Luckily, with the huge amounts of data that are being generated in the digital age (a.k.a. Big Data) combined with the availability of high-performance graphical processing units (GPUs) that allow more many times more computations than a CPU, deep learning has been able to grow tremendously in the past couple decades.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-05T14:23:55-05:00">December 5, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=ML+vs.+DL-+Defining+Features%20http%3A%2F%2Flocalhost%3A4000%2Fmachinelearning%2Flesson7%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmachinelearning%2Flesson7%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmachinelearning%2Flesson7%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/machinelearning/lesson6/" class="pagination--pager" title="What is Deep Learning?
+">Previous</a>
+    
+    
+      <a href="/machinelearning/lesson8/" class="pagination--pager" title="End Note
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/meyerv11045" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Vikram Meyer. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

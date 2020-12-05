@@ -9,6 +9,9 @@ main:
   - title: "PSCI 2259"  
     url: "/psci2259/"
 
+  - title: "Machine Learning"
+    url: "/machinelearning/"
+
 # Side Navbars
 math2500_side:
   - title: Chapter 1
@@ -25,3 +28,23 @@ psci2259_side:
         url: /psci2259/welcome/
       - title: "Lesson 1"
         url: /psci2259/lesson1/
+
+ML_side:
+  - title: Artificial Intelligence
+    children:
+      - title: "What is Artificial Intelligence?"
+        url: /machinelearning/lesson1/ 
+      - title: "Classifications of AI"
+        url: /machinelearning/lesson2/
+      - title: "AI vs. ML vs. DL"
+        url: /machinelearning/lesson3/
+      - title: "What is Machine Learning?"
+        url: /machinelearning/lesson4/
+      - title: "3 Types of Machine Learning"
+        url: /machinelearning/lesson5/
+      - title: "What is Deep Learning?"
+        url: /machinelearning/lesson6/
+      - title: "ML vs. DL- Defining Features"
+        url: /machinelearning/lesson7/
+      - title: "End Note"
+        url: /machinelearning/lesson8/

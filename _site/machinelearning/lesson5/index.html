@@ -1,0 +1,355 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>3 Types of Machine Learning - The Learning Journey</title>
+<meta name="description" content="In order to better understand the numerous different types of machine learning algorithms, they are classified according to how they learn.">
+
+
+  <meta name="author" content="Vikram Meyer">
+  
+  <meta property="article:author" content="Vikram Meyer">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="The Learning Journey">
+<meta property="og:title" content="3 Types of Machine Learning">
+<meta property="og:url" content="http://localhost:4000/machinelearning/lesson5/">
+
+
+  <meta property="og:description" content="In order to better understand the numerous different types of machine learning algorithms, they are classified according to how they learn.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-12-05T14:23:55-05:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/machinelearning/lesson5/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Vikram Meyer",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="The Learning Journey Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/profile.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          The Learning Journey
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About Me</a>
+            </li><li class="masthead__menu-item">
+              <a href="/math2500/">Math 2500</a>
+            </li><li class="masthead__menu-item">
+              <a href="/psci2259/">PSCI 2259</a>
+            </li><li class="masthead__menu-item">
+              <a href="/machinelearning/">Machine Learning</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Artificial Intelligence</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/machinelearning/lesson1/">What is Artificial Intelligence?</a></li>
+          
+            <li><a href="/machinelearning/lesson2/">Classifications of AI</a></li>
+          
+            <li><a href="/machinelearning/lesson3/">AI vs. ML vs. DL</a></li>
+          
+            <li><a href="/machinelearning/lesson4/">What is Machine Learning?</a></li>
+          
+            <li><a href="/machinelearning/lesson5/" class="active">3 Types of Machine Learning</a></li>
+          
+            <li><a href="/machinelearning/lesson6/">What is Deep Learning?</a></li>
+          
+            <li><a href="/machinelearning/lesson7/">ML vs. DL- Defining Features</a></li>
+          
+            <li><a href="/machinelearning/lesson8/">End Note</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="3 Types of Machine Learning">
+    <meta itemprop="description" content="In order to better understand the numerous different types of machine learning algorithms, they are classified according to how they learn.">
+    <meta itemprop="datePublished" content="2020-12-05T14:23:55-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">3 Types of Machine Learning
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In order to better understand the numerous different types of machine learning algorithms, they are classified according to how they learn.</p>
+
+<p>Note: Semi-supervised learning is what some consider a 4th type of machine learning but it is beyond the scope of our current research and can be summarized as a combination of supervised learning with unsupervised learning.</p>
+
+<h2 id="supervised-learning">Supervised Learning</h2>
+
+<p>The first type, and most prevalent type, of machine learning is supervised learning. Supervised learning involves feeding the program labeled data and getting (hopefully correct) predictions when new, unlabeled data is fed into the program \cite{ML_MIT}. Described another way, supervised learning is giving a program a data set of correct answers and asking it to produce more right answers for new, unlabeled input data. Supervised learning takes on two forms– regression and classification:</p>
+
+<p><em>Regression</em> involves predicting continuous valued output such as the price of a house or the temperature on a given day. The most basic regression algorithm is univariate linear regression which takes a single feature and makes a prediction based on that. Continuing the house example, univariate linear regression would take a dataset of house size and price where house size is the feature being used to predict the price. While univariate linear regression is useful for things like lab reports (many applications like excel have this basic functionality built in), multivariate linear regression is used more often in the field of machine learning because it allows the modeling of more complex situations. For example, instead of only predicting the price of a house based on its size, multivariate linear regression would take multiple features as input such as house size, number of bathrooms, number of bedrooms, and much more. By utilizing more data, multivariate linear regression allows a more accurate modeling of the situation. However, more data is not always good, since the features being used to predict the output must be directly related or else the predictions will be less accurate. For instance, in the house price example if an included feature was the color of the walls, this could mislead the algorithm into finding a correlation that does not exist because it is most likely that the color of the walls does not relate to the price of the house.</p>
+
+<p><em>Classification</em> involves predicting discrete valued outputs such as whether a picture is a cat or dog or whether an image of a handwritten digit is 0,1,2,3,4,5,6,7,8, or 9. The cat or dog example is an instance of binary classification where the output is either one thing or the other (0 or 1). The algorithm commonly used in binary classification problems is logistic regression, an algorithm that will be covered in more depth later on in the documentation. The digit classification example is an instance of multi-class classification because there are 10 possible classes (each of the digits) an input could be predicted as. While the logistic regression algorithm can be implemented for multi-class classification, neural networks are another technique used to tackle multi-class classification problems,which we will discuss in depth later in the documentation.</p>
+
+<h2 id="unsupervised-learning">Unsupervised Learning</h2>
+
+<p>The second type of machine learning is unsupervised learning. Unsupervised learning involves feeding the program an unlabeled dataset and asking it to find structures and patterns in the dataset \cite{UnsupervisedLearning}. One of the big advantages of unsupervised learning is that it learns from unlabeled data unlike supervised learning. Sources of unlabeled data are much more common since labeled data almost always has to be curated by humans in some fashion. Unsupervised learning takes on 2 forms– clustering and association:</p>
+
+<p><em>Clustering</em> involves finding a structure/pattern in a collection of uncategorized data. Clustering algorithms will process unlabeled data and find natural clusters/groups amongst the data \cite{UnsupervisedLearning}.</p>
+
+<p><em>Association</em> involves establishing relationships between data objects in a large data set. Association algorithms focus on discovering interesting relationships between variables in large datasets \cite{UnsupervisedLearning}.</p>
+
+<h2 id="reinforcement-learning">Reinforcement Learning</h2>
+<p>The third type, and “latest frontier of machine learning”, is reinforcement learning. Reinforcement algorithms learn through trial and error over thousands of rounds of the desired task \cite{ML_MIT}. For example, DeepMind’s AlphaGo which beat the best human in the world at the very strategic and complex game of Go was trained by playing thousands of games of Go against itself and expert humans in order to learn the best strategies and behaviors to win a game of Go \cite{AlphaGo}. Reinforcement learning is popular with video and board games such as Pong because they have clearly defined objectives (e.g. score the most points) and have clearly defined rewards (e.g. score a point if the ball goes in past the opponent’s paddle). The ability to have clearly defined rewards helps the agent learn the best way to achieve its objective of winning the game.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-05T14:23:55-05:00">December 5, 2020</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=3+Types+of+Machine+Learning%20http%3A%2F%2Flocalhost%3A4000%2Fmachinelearning%2Flesson5%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmachinelearning%2Flesson5%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmachinelearning%2Flesson5%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/machinelearning/lesson4/" class="pagination--pager" title="What is Machine Learning?
+">Previous</a>
+    
+    
+      <a href="/machinelearning/lesson6/" class="pagination--pager" title="What is Deep Learning?
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/meyerv11045" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Vikram Meyer. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

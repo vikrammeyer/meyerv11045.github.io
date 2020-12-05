@@ -1,0 +1,11 @@
+I",	<p>As defined earlier, machine learning algorithms give computers the ability to learn from data and make decisions such as whether an email is spam or not. A computer is able to recognize a spam email based on features that are chosen by humans. For instance, features useful for detecting spam emails are the subject line, the words used in the body, and the number of links/images in the email. In machine learning, humans define/choose these features that will be used by the machine learning algorithm to make predictions. This process of choosing and defining the features in the dataset to be used in the machine learning model is known as <em>feature selection</em> and <em>feature engineering</em>. In feature selection, attributes of the data that are irrelevant to the problem are removed from the dataset in order to improve accuracy of the machine learning model \cite{FeatureSelection}. For instance, in trying to predict flight delays, the current temperature might be important, but the temperature from a year ago would be irrelevant to the problem, so all the old temperatures would be removed from the dataset as part of the feature selection process \cite{FeatureSelection}. Feature engineering is the process of adding and creating new attributes/features to the dataset in order to improve the machine learning model’s accuracy \cite{FeatureEngineering}. Feature engineering is highly dependent on the context of the problem and is often done by data scientists who understand relationships in the data and understand what features might be helpful for improving the model’s prediction accuracy. Here is the typical flow of using machine learning to solve a problem \cite{MLvsDL}:</p>
+
+<ul>
+  <li>Upload the input data relevant to the problem (e.g. Audio, Text, Images, Numbers, etc.)</li>
+  <li>Define the important features of the data through feature selection and feature engineering (e.g. For a simple linear regression to predict housing prices the important features might be the size of the house, the number of bedrooms, and the number of bathrooms)</li>
+  <li>Create and train the model(s)– Multiple models might be useful in solving the problem</li>
+  <li>Make predictions on new data using the trained model</li>
+</ul>
+
+<p><img src="/assets/images/ML_images/AI/MLFlow.png" alt="Machine Learning Flow" /></p>
+:ET

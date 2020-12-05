@@ -251,6 +251,11 @@ collections:
     output: true
     sort_by: lesson
     permalink: /:collection/:path/
+
+  machinelearning:
+    output: true
+    sort_by: lesson
+    permalink: /:collection/:path/
   
 # Defaults
 defaults:
@@ -305,3 +310,16 @@ defaults:
       related: false
       sidebar:
         nav: "psci2259_side"
+
+  - scope:
+      path: ""
+      type: machinelearning
+    values: 
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: True
+      related: false
+      sidebar:
+        nav: "ML_side"
