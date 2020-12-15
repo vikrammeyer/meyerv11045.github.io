@@ -310,7 +310,7 @@ defaults:
       related: false
       sidebar:
         nav: "psci2259_side"
-
+  # _machinelearning
   - scope:
       path: ""
       type: machinelearning

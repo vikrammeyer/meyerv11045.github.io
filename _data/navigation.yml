@@ -3,12 +3,6 @@ main:
   - title: "About Me"
     url: /about/
     
-  - title: "Math 2500"
-    url: "/math2500/"
-  
-  - title: "PSCI 2259"  
-    url: "/psci2259/"
-
   - title: "Machine Learning"
     url: "/machinelearning/"
 
@@ -18,8 +12,6 @@ math2500_side:
     children:
       - title: "Overview"
         url: /math2500/overview/
-      - title: "Docker Overview"
-        url: /math2500/docker_overview/
   
 psci2259_side:
   - title: Chapter 1
