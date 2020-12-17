@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2020-12-05T14:23:55-05:00">
+  <meta property="article:published_time" content="2020-12-16T22:56:36-05:00">
 
 
 
@@ -77,6 +77,16 @@
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+    }
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
@@ -136,10 +146,6 @@
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/about/">About Me</a>
-            </li><li class="masthead__menu-item">
-              <a href="/math2500/">Math 2500</a>
-            </li><li class="masthead__menu-item">
-              <a href="/psci2259/">PSCI 2259</a>
             </li><li class="masthead__menu-item">
               <a href="/machinelearning/">Machine Learning</a>
             </li></ul>
@@ -208,6 +214,66 @@
         
       </li>
     
+      <li>
+        
+          <span class="nav__sub-title">Supervised Learning Algorithms</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/machinelearning/lesson9/">Overview</a></li>
+          
+            <li><a href="/machinelearning/lesson10/">Linear Regression</a></li>
+          
+            <li><a href="/machinelearning/lesson11/">Logistic Regression</a></li>
+          
+            <li><a href="/machinelearning/lesson12/">Gradient Descent</a></li>
+          
+            <li><a href="/machinelearning/lesson13/">Gradient Descent Optimization Algorithms</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Neural Networks</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/machinelearning/lesson14/">Overview</a></li>
+          
+            <li><a href="/machinelearning/lesson15/">Activation Functions</a></li>
+          
+            <li><a href="/machinelearning/lesson16/">Backpropagation</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Error Analysis</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/machinelearning/lesson17/">Overview</a></li>
+          
+            <li><a href="/machinelearning/lesson18/">Overfitting vs. Underfitting Analogy</a></li>
+          
+            <li><a href="/machinelearning/lesson19/">Overfitting vs. Underfitting</a></li>
+          
+            <li><a href="/machinelearning/lesson20/">Solutions</a></li>
+          
+        </ul>
+        
+      </li>
+    
   </ul>
 </nav>
 
@@ -220,7 +286,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="ML vs. DL- Defining Features">
     <meta itemprop="description" content="As defined earlier, machine learning algorithms give computers the ability to learn from data and make decisions such as whether an email is spam or not. A computer is able to recognize a spam email based on features that are chosen by humans. For instance, features useful for detecting spam emails are the subject line, the words used in the body, and the number of links/images in the email. In machine learning, humans define/choose these features that will be used by the machine learning algorithm to make predictions. This process of choosing and defining the features in the dataset to be used in the machine learning model is known as feature selection and feature engineering. In feature selection, attributes of the data that are irrelevant to the problem are removed from the dataset in order to improve accuracy of the machine learning model \cite{FeatureSelection}. For instance, in trying to predict flight delays, the current temperature might be important, but the temperature from a year ago would be irrelevant to the problem, so all the old temperatures would be removed from the dataset as part of the feature selection process \cite{FeatureSelection}. Feature engineering is the process of adding and creating new attributes/features to the dataset in order to improve the machine learning model’s accuracy \cite{FeatureEngineering}. Feature engineering is highly dependent on the context of the problem and is often done by data scientists who understand relationships in the data and understand what features might be helpful for improving the model’s prediction accuracy. Here is the typical flow of using machine learning to solve a problem \cite{MLvsDL}:">
-    <meta itemprop="datePublished" content="2020-12-05T14:23:55-05:00">
+    <meta itemprop="datePublished" content="2020-12-16T22:56:36-05:00">
     
 
     <div class="page__inner-wrap">
@@ -262,7 +328,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-05T14:23:55-05:00">December 5, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-16T22:56:36-05:00">December 16, 2020</time></p>
 
 
       </footer>

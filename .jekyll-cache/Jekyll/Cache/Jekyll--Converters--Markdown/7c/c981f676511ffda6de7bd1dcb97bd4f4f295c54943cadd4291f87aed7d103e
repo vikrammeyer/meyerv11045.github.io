@@ -1,4 +1,4 @@
-I"í<p>The following articles are intended to introduce the field of machine learning to beginners by explaining the math behind the algorithms in order to give a better intuition for how the algorithms work. The necessary prerequisite knowledge is multivariable calculus and beginner linear algebra (matrices, transposes, and matrix multiplication). These articles are in part from my summer internship at DLG where I collaborated with Huy T., Nam H., and Nguyen V.</p>
+I"ë<p>The following articles are intended to introduce the field of machine learning to beginners by explaining the math behind the algorithms in order to give a better intuition for how the algorithms work. The necessary prerequisite knowledge is multivariable calculus and beginner linear algebra (matrices, transposes, and matrix multiplication). These articles are in part from my summer internship at DLG where I collaborated with Huy T., Nam H., and Nguyen V.</p>
 
 <h2>
     <a href="/machinelearning/">Machine Learning Overview</a>
@@ -34,5 +34,17 @@
 
 <h2>
     <a href="/machinelearning/lesson8/">End Note</a>
+  </h2>
+
+<h2>
+    <a href="/machinelearning/lesson9/">Supervised Learning Algorithms Overview</a>
+  </h2>
+
+<h2>
+    <a href="/machinelearning/lesson10/">Linear Regression</a>
+  </h2>
+
+<h2>
+    <a href="/machinelearning/lesson11/">Logistic Regression</a>
   </h2>
 :ET

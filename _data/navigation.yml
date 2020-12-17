@@ -40,3 +40,33 @@ ML_side:
         url: /machinelearning/lesson7/
       - title: "End Note"
         url: /machinelearning/lesson8/
+  - title: Supervised Learning Algorithms
+    children:
+      - title: "Overview"
+        url: /machinelearning/lesson9/
+      - title: "Linear Regression"
+        url: /machinelearning/lesson10/
+      - title: "Logistic Regression"
+        url: /machinelearning/lesson11/
+      - title: "Gradient Descent"
+        url: /machinelearning/lesson12/
+      - title: "Gradient Descent Optimization Algorithms"
+        url: /machinelearning/lesson13/
+  - title: Neural Networks
+    children:
+      - title: "Overview"
+        url: /machinelearning/lesson14/
+      - title: "Activation Functions"
+        url: /machinelearning/lesson15/
+      - title: "Backpropagation"
+        url: /machinelearning/lesson16/
+  - title: Error Analysis
+    children:
+      - title: "Overview"
+        url: /machinelearning/lesson17/
+      - title: "Overfitting vs. Underfitting Analogy"
+        url: /machinelearning/lesson18/
+      - title: "Overfitting vs. Underfitting"
+        url: /machinelearning/lesson19/
+      - title: "Solutions"
+        url: /machinelearning/lesson20/

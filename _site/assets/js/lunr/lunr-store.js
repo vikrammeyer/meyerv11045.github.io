@@ -53,6 +53,24 @@ var store = [{
         "url": "http://localhost:4000/machinelearning/lesson8/",
         "teaser": null
       },{
+        "title": "Supervised Learning Algorithms Overview",
+        "excerpt":"As an area of machine learning, supervised learning algorithms are the most basic and will be used to lay the groundwork for machine learning before we dive into the more complex area of reinforcement learning. As mentioned in \\ref{SupervisedLearning}, supervised learning involves training a model on labeled data so that...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/machinelearning/lesson9/",
+        "teaser": null
+      },{
+        "title": "Linear Regression",
+        "excerpt":"The goal of linear regression is to make a continuous value prediction for a given input after having trained the model on a labeled data set. Take for instance this simple problem of predicting the salary for an employee based on the number of years of experience. In order to...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/machinelearning/lesson10/",
+        "teaser": null
+      },{
+        "title": "Logistic Regression",
+        "excerpt":"While linear regression makes continuous value predictions (e.g. any number between 0 and 100), logistic regression makes discrete predictions (e.g. $y$ is either 1 or 0). These discrete predictions can be used to classify inputs such as whether an email is spam or not spam or whether a tumor is...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/machinelearning/lesson11/",
+        "teaser": null
+      },{
         "title": "Math 2500 Overview",
         "excerpt":"Welcome to the beginning of my class notes for Math 2500 Fall 2020 at Vanderbilt University taught by Professor Bruce Hughes. This course covers Multivariable Calculus and Linear Algebra from a proofs based perspective.        Math 2500 Overview     ","categories": [],
         "tags": [],
