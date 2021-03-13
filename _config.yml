@@ -25,7 +25,7 @@ url                      : "https://meyerv11045.github.io" #the base hostname & 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/profile.png"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/assets/images/profile.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -68,21 +68,6 @@ google_site_verification :
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
-
-# Social Sharing
-twitter:
-  username               :
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
 
 # Analytics
 analytics:
@@ -241,11 +226,6 @@ collections:
     sort_by: lesson
     permalink: /:collection/:path/ 
 
-  psci2259:
-    output: true
-    sort_by: lesson
-    permalink: /:collection/:path/
-
   machinelearning:
     output: true
     sort_by: lesson
@@ -291,19 +271,6 @@ defaults:
       sidebar: 
         nav: "math2500_side"
   
-  # _psci2259
-  - scope: 
-      path: ""
-      type: psci2259
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-      comments: false
-      share: false
-      related: false
-      sidebar:
-        nav: "psci2259_side"
   # _machinelearning
   - scope:
       path: ""
