@@ -50,6 +50,7 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
+  hide                   : true
   path                   : # blank (default) uses feed.xml
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
@@ -108,13 +109,6 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/vikram-meyer-821763165/"
-
-# Site Footer
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/meyerv11045"
 
 # Reading Files
 include:
