@@ -284,3 +284,4 @@ defaults:
       related: false
       sidebar:
         nav: "ML_side"
+theme: jekyll-theme-slate
