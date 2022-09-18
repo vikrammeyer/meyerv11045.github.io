@@ -1,0 +1,30 @@
+{% for page in site.pages %}
+    {% if page.tags contains "about" %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
+{% endfor %}
+{% for page in site.pages %}
+    {% if page.tags contains "blog" %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
+{% endfor %}
+{% for page in site.pages %}
+    {% if page.tags contains "notes" %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
+{% endfor %}
+{% for page in site.pages %}
+    {% if page.tags contains "writing" %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
+{% endfor %}
+<!-- {% for page in site.pages %}
+    {% if page.tags contains "talks" %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
+{% endfor %}
+{% for page in site.pages %}
+    {% if page.tags contains "papers" %}
+        <a href="{{ page.url }}">{{ page.title }}</a>
+    {% endif %}
+{% endfor %} -->
