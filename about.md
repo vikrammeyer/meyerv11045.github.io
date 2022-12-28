@@ -1,7 +1,7 @@
 ---
 layout: page
 title: about
-permalink: /about/
+permalink: /
 tags: about
 ---
 <p style="text-align:center;"><img src="/images/headshot.jpeg" width="200" height="200" alt="Vikram Meyer" class="center"/> </p>

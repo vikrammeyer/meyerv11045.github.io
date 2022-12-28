@@ -4,7 +4,7 @@ title:      "Movable Type"
 date:       2018-03-12
 summary:    Playing around with books from project Gutenberg.
 categories: nlp ml
-published: true
+published: false
 ---
 
 ## Prologue
